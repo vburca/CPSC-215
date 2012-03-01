@@ -1,0 +1,45 @@
+/**
+ * @author Vlad Burca, Pauline Lake
+ * @version 04-14-2011
+ * 
+ * File: Output.txt
+ */
+
+
+vburca@smalltalk:/home3/vburca/cpsc215/11. 04-14-2011$ java L11Driver
+Input list:
+
+BOS - Boston
+MDW - Chicago
+ORD - Chicago
+FRA - Frankfurt am Main
+BDL - Hartford
+LGW - London
+LHR - London
+STN - London
+EWR - Newark
+JFK - New York
+LGA - New York
+CDG - Paris
+ORY - Paris
+SFO - San Francisco
+HND - Tokyo
+NRT - Tokyo
+
+There are three major airports in London, and 
+get(London) gives the key-value pair (London, LGW)
+
+After removing the entry (London, LGW)
+get(London) gives the key-value pair (London, LHR)
+
+
+ITERATORS: 
+entrySet Iterator: 
+BDL SFO LHR STN HND NRT BOS EWR FRA MDW ORD CDG ORY JFK LGA 
+getAll(London) Iterator: 
+LHR STN 
+removeAll(London) Iterator: 
+LHR STN 
+entrySet Iterator (without London): 
+BDL SFO HND NRT BOS EWR FRA MDW ORD CDG ORY JFK LGA 
+

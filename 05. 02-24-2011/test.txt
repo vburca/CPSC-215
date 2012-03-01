@@ -1,0 +1,82 @@
+
+    Stack<Character> st = new ArrayStack<Character>();
+    int errPos = 0, errType = 0;
+    int errFound = 0;
+    char errExpected = ' ', errOpen = ' ';
+
+
+switch (inString.charAt(k)){
+      	case '(':  st.push(inString.charAt(k)); 
+      	case '[':  st.push(inString.charAt(k)); 
+      	case '{':  st.push(inString.charAt(k)); 
+      	case ')':  if (errFound == 0) {
+      				   if (st.isEmpty() == true) {
+      				   		errType = 1;
+      				   		errPos = k + 1;
+      				   		errFound = 1;
+      				   		errOpen = ')';
+      				   		}
+      				   else {
+      				   		char d = st.pop();
+      				   		if (d != '(') {
+      				   			errType = 0;
+      				   			errPos = k + 1;
+      				   			errFound = 1;
+      				   			errOpen = ')';
+      				   			switch (d) {
+      				   				case '[': errExpected = ']';
+      				   				case '{': errExpected = '}';
+      				   				}
+      				   			}
+      				 	    }  
+      			   }
+        case ']':  if (errFound == 0) {
+      				   if (st.isEmpty() == true) {
+      				   		errType = 1;
+      				   		errPos = k + 1;
+      				   		errFound = 1;
+      				   		errOpen = ']';
+      				   		}
+      				   else {
+      				   		char d = st.pop();
+      				   		if (d != '[') {
+      				   			errType = 0;
+      				   			errPos = k + 1;
+      				   			errFound = 1;
+      				   			errOpen = ']';
+      				   			switch (d) {
+      				   				case '(': errExpected = ')';
+      				   				case '{': errExpected = '}';
+      				   				}
+      				   			}
+      				        }
+      				}	
+      	case '}':  if (errFound == 0) {
+      				   if (st.isEmpty() == true) {
+      				   		errType = 1;
+      				   		errPos = k + 1;
+      				   		errFound = 1;
+      				   		errOpen = '}';
+      				   		}
+      				   else {
+      				   		char d = st.pop();
+      				   		if (d != '{') {
+      				   			errType = 0;
+      				   			errPos = k + 1;
+      				   			errFound = 1;
+      				   			errOpen = '}';
+      				   			switch (d) {
+      				   				case '(': errExpected = ')';
+      				   				case '[': errExpected = ']';
+      				   				}
+      				   			}
+      				      	}
+      			}
+      }		   
+      
+      
+      
+      switch (errType) {
+    	case 1: System.out.println("Unmatched bracket at character " + errPos + ": No opening bracket for " + errOpen + ". ");
+    	case 0: System.out.println("Unmatched bracket at character " + errPos + ": Found " + errOpen + " expecting " + errExpected);
+    }			

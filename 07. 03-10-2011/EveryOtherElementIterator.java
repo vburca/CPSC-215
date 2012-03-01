@@ -1,0 +1,48 @@
+/**
+ * @author: Vlad Burca, Rahul Chatterjee
+ * @version: 03-10-2011
+ */
+
+/**
+ * File: EveryOtherElementIterator.java
+ *
+ * This class implements an every other iterator for the ADT node list.
+ *
+ */
+
+public class EveryOtherElementIterator<E> implements Iterator<E> {
+
+  protected PositionList<E> list;  // the underlying list
+  protected Position<E> cursor;    // the next position
+
+  /** Creates an every other element iterator over the given list. 
+   * @param L - PositionList<E>
+   */
+  public EveryOtherElementIterator(PositionList<E> L) {
+    list = L;
+    cursor = (list.isEmpty())? null : list.first();
+  }
+
+  /** Tests whether there are elements left in the iterator. 
+   * @return boolean
+   */
+  public boolean hasNext() { return (cursor != null); }
+
+  /** Returns the next element in the iterator. 
+   * @return toReturn - E
+   * @see NoSuchElementException
+   */
+  public E next() throws NoSuchElementException {
+    if (cursor == null)
+      throw new NoSuchElementException("No next element");
+    E toReturn = cursor.element();
+	Position<E> next_cursor;
+	next_cursor = (cursor == list.last())? null : list.next(cursor);
+	if (next_cursor == null)
+       cursor = null;
+    else
+       cursor = (next_cursor == list.last())? null : list.next(next_cursor);
+   
+    return toReturn;
+  }
+}

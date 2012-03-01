@@ -1,0 +1,46 @@
+/* Filename: Output.out  
+   Author: Vlad Burca, Rahul Chatterjee
+*/
+
+
+vburca@lab07:/home3/vburca/cpsc215/07. 03-10-2011$ java L7Driver
+
+addFirst(8): 
+print(): [8]
+revPrint(): [8]
+everyOtherPrint(): [8]
+
+first(): 8
+addAfter(p1, 5): 
+print(): [8, 5]
+revPrint(): [5, 8]
+everyOtherPrint(): [8]
+
+next(p1): 5
+addBefore(p2, 3): 
+print(): [8, 3, 5]
+revPrint(): [5, 3, 8]
+everyOtherPrint(): [8, 5]
+
+prev(p2): 3
+addFirst(9): 
+print(): [9, 8, 3, 5]
+revPrint(): [5, 3, 8, 9]
+everyOtherPrint(): [9, 3]
+
+last(): 5
+remove(first()): 
+print(): [8, 3, 5]
+revPrint(): [5, 3, 8]
+everyOtherPrint(): [8, 5]
+
+set(p3, 7): 
+print(): [8, 7, 5]
+revPrint(): [5, 7, 8]
+everyOtherPrint(): [8, 5]
+
+addAfter(first(), 2): 
+print(): [8, 2, 7, 5]
+revPrint(): [5, 7, 2, 8]
+everyOtherPrint(): [8, 7]
+

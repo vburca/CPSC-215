@@ -1,0 +1,147 @@
+/*
+  Author: Vlad Burca, Steve Petkovsek
+  File: L6Driver.out
+*/
+
+vburca@javascript:/home3/vburca/cpsc215/06. 03-03-2011$ java L6Driver
+Adding last: M
+[M]
+Adding last: N
+[M,N]
+Adding last: O
+[M,N,O]
+Adding last: P
+[M,N,O,P]
+Adding last: Q
+[M,N,O,P,Q]
+Adding last: R
+[M,N,O,P,Q,R]
+Adding last: S
+[M,N,O,P,Q,R,S]
+Adding last: T
+[M,N,O,P,Q,R,S,T]
+Adding last: U
+[M,N,O,P,Q,R,S,T,U]
+Adding last: V
+[M,N,O,P,Q,R,S,T,U,V]
+Adding last: W
+[M,N,O,P,Q,R,S,T,U,V,W]
+Adding last: X
+[M,N,O,P,Q,R,S,T,U,V,W,X]
+Adding last: Y
+[M,N,O,P,Q,R,S,T,U,V,W,X,Y]
+Adding last: Z
+[M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]
+
+Size: 14
+
+Adding first: L
+[L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]
+Adding first: K
+[K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]
+Adding first: J
+[J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]
+Adding first: I
+[I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]
+Adding first: H
+[H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]
+Adding first: G
+[G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]
+Adding first: F
+[F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]
+Adding first: E
+[E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]
+Adding first: D
+[D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]
+Adding first: C
+[C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]
+Adding first: B
+[B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]
+Adding first: A
+[A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]
+
+Size: 26
+
+Is empty: false
+
+First element: A
+Removing first element, A
+[B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]
+Last element: Z
+Removing last element, Z
+[B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y]
+First element: B
+Removing first element, B
+[C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y]
+Last element: Y
+Removing last element, Y
+[C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X]
+First element: C
+Removing first element, C
+[D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X]
+Last element: X
+Removing last element, X
+[D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W]
+First element: D
+Removing first element, D
+[E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W]
+Last element: W
+Removing last element, W
+[E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V]
+First element: E
+Removing first element, E
+[F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V]
+Last element: V
+Removing last element, V
+[F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U]
+First element: F
+Removing first element, F
+[G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U]
+Last element: U
+Removing last element, U
+[G,H,I,J,K,L,M,N,O,P,Q,R,S,T]
+First element: G
+Removing first element, G
+[H,I,J,K,L,M,N,O,P,Q,R,S,T]
+Last element: T
+Removing last element, T
+[H,I,J,K,L,M,N,O,P,Q,R,S]
+First element: H
+Removing first element, H
+[I,J,K,L,M,N,O,P,Q,R,S]
+Last element: S
+Removing last element, S
+[I,J,K,L,M,N,O,P,Q,R]
+First element: I
+Removing first element, I
+[J,K,L,M,N,O,P,Q,R]
+Last element: R
+Removing last element, R
+[J,K,L,M,N,O,P,Q]
+First element: J
+Removing first element, J
+[K,L,M,N,O,P,Q]
+Last element: Q
+Removing last element, Q
+[K,L,M,N,O,P]
+First element: K
+Removing first element, K
+[L,M,N,O,P]
+Last element: P
+Removing last element, P
+[L,M,N,O]
+First element: L
+Removing first element, L
+[M,N,O]
+Last element: O
+Removing last element, O
+[M,N]
+First element: M
+Removing first element, M
+[N]
+Last element: N
+Removing last element, N
+[]
+
+Is empty: true
+

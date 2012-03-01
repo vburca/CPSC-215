@@ -1,0 +1,32 @@
+/*
+  Author: Vlad Burca, Steve Petkovsek
+  File: Josephus.out
+*/
+
+vburca@javascript:/home3/vburca/cpsc215/06. 03-03-2011$ java Josephus
+  Queue: DequeQueue@10385c1  k = 3
+    Doug is out
+  Queue: DequeQueue@10385c1  k = 3
+    Bob is out
+  Queue: DequeQueue@10385c1  k = 3
+    Alice is out
+  Queue: DequeQueue@10385c1  k = 3
+    Cindy is out
+  Queue: DequeQueue@10385c1  k = 3
+    Fred is out
+First winner is Ed
+  Queue: DequeQueue@42719c  k = 10
+    Kim is out
+  Queue: DequeQueue@42719c  k = 10
+    Lance is out
+  Queue: DequeQueue@42719c  k = 10
+    Irene is out
+  Queue: DequeQueue@42719c  k = 10
+    Gene is out
+  Queue: DequeQueue@42719c  k = 10
+    Hope is out
+Second winner is Jack
+  Queue: DequeQueue@30c221  k = 7
+    Roberto is out
+Third winner is Mike
+

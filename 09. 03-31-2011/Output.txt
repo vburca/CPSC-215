@@ -1,0 +1,38 @@
+/**
+ * @author: Vlad Burca
+ * @version: 03/31/2011
+ */
+
+/*
+  Author: Vlad Burca
+  Filename: Output.txt
+  Date: 03/31/2011
+*/
+
+vburca@oberon:/home3/vburca/cpsc215/09. 03-31-2011$ java L9Driver
+
+Regular ArrayIndexList (after each insertion): 
+[1]
+[1, 2]
+[1, 2, 3]
+[1, 2, 3, 4]
+[1, 2, 3, 4, 5]
+[1, 2, 3, 4, 5, 6]
+[1, 2, 3, 4, 5, 6, 7]
+[1, 2, 3, 4, 5, 6, 7, 8]
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+Reversed ArrayIndexList: 
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+Random ComparableArrayIndexList(Integer): 
+[2, 5, 6, 1, 8, 9, 7, 4, 3, 10]
+Sorted ComparableArrayIndexList(Integer): 
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+Random ComparableArrayIndexList(String): 
+[a, e, i, z, w, m, l, c, t, s]
+Sorted ComparableArrayIndexList(String): 
+[a, c, e, i, l, m, s, t, w, z]
+

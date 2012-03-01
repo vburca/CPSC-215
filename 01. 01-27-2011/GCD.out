@@ -1,0 +1,77 @@
+/*
+
+Title: 			GCD.out
+Author: 		Vlad Burca
+			Chris Buesser
+Last Modified: 		01/27/2011
+
+*/
+
+
+*************************************************************************************
+* #1
+****
+
+vburca@lab06:~/cpsc215/01. 01-27-2011$ java GCD
+This program assumes m < n.
+Enter an integer value for m: 3
+Enter an integer value for n: 5
+By the brute-force method, gcd(3, 5) = 1.
+By the Euclidean algorithm, gcd(3, 5) = 1.
+By the recursive Euclidean algorithm, gcd(3, 5) = 1.
+
+*
+*************************************************************************************
+* #2
+****
+
+vburca@lab06:~/cpsc215/01. 01-27-2011$ java GCD
+This program assumes m < n.
+Enter an integer value for m: 91
+Enter an integer value for n: 287
+By the brute-force method, gcd(91, 287) = 7.
+By the Euclidean algorithm, gcd(91, 287) = 7.
+By the recursive Euclidean algorithm, gcd(91, 287) = 7.
+
+*
+*************************************************************************************
+* #3
+****
+
+vburca@lab06:~/cpsc215/01. 01-27-2011$ java GCD
+This program assumes m < n.
+Enter an integer value for m: 123
+Enter an integer value for n: 246
+By the brute-force method, gcd(123, 246) = 123.
+By the Euclidean algorithm, gcd(123, 246) = 123.
+By the recursive Euclidean algorithm, gcd(123, 246) = 123.
+
+*
+*************************************************************************************
+* #4
+****
+
+vburca@lab06:~/cpsc215/01. 01-27-2011$ java GCD
+This program assumes m < n.
+Enter an integer value for m: 827
+Enter an integer value for n: 1000
+By the brute-force method, gcd(827, 1000) = 1.
+By the Euclidean algorithm, gcd(827, 1000) = 1.
+By the recursive Euclidean algorithm, gcd(827, 1000) = 1.
+
+*
+*************************************************************************************
+* #5
+****
+
+vburca@lab06:~/cpsc215/01. 01-27-2011$ java GCD
+This program assumes m < n.
+Enter an integer value for m: 14
+Enter an integer value for n: 28
+By the brute-force method, gcd(14, 28) = 14.
+By the Euclidean algorithm, gcd(14, 28) = 14.
+By the recursive Euclidean algorithm, gcd(14, 28) = 14.
+
+*
+*************************************************************************************
+

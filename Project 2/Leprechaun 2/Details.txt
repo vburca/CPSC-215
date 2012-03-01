@@ -1,0 +1,82 @@
+/**
+ * @author 	Alex Zhang;
+ *			Vlad Burca.
+ * @version 05 - 02 - 2011.
+ * File Name: Details.txt
+ */
+
+We tested our simulation using the args[] array provided in the main method. We gave in two values. The number of Leprechauns and the number of iterations we wanted our simulation to run. Our algorithm is using the TreeMap with indeces as keys to iterate through our Leprechauns and to manipulate the Leprechauns using the TreeMap with horizon values (x) as keys. For each Leprechaun, we got its reference using an iterator of the indexMap. We then remove the Leprechaun from the horizonMap using its horizon value. Once the Leprechaun has been removed, it jumped so we could change its horizon position and reinserted using the new position to maintain a sorted TreeMap. Once it was reinserted into the tree, we passed the Leprechaun the tree and had it steal from its neighbors. Our tests worked because we never lost gold and the horizon positions of the Leprechauns are changing depending on the number of gold they currently have.
+
+//OPTIONAL RUN
+vburca@smalltalk:/home3/vburca/Desktop$ java DoubleRainbow 6 6
+I am Leprechaun: 1, I am at: 0.823818065357699 and I have: 1000000.0 gold.
+I am Leprechaun: 4, I am at: 1.3090389976493895 and I have: 1000000.0 gold.
+I am Leprechaun: 5, I am at: 1.5170682759733098 and I have: 1000000.0 gold.
+I am Leprechaun: 3, I am at: 1.8921920869401947 and I have: 1000000.0 gold.
+I am Leprechaun: 6, I am at: 3.984159688705253 and I have: 1000000.0 gold.
+I am Leprechaun: 2, I am at: 4.980274800695168 and I have: 1000000.0 gold.
+
+
+Removed I am Leprechaun: 4, I am at: 1.3090389976493895 and I have: 0.0 gold.
+Removed I am Leprechaun: 6, I am at: 3.984159688705253 and I have: 0.0 gold.
+I am Leprechaun: 3, I am at: -981473.2088506613 and I have: 3000000.0 gold.
+I am Leprechaun: 1, I am at: -380203.196026295 and I have: 0.0 gold.
+I am Leprechaun: 5, I am at: 181687.18586692077 and I have: 2000000.0 gold.
+I am Leprechaun: 2, I am at: 962456.5833670386 and I have: 1000000.0 gold.
+
+
+Removed I am Leprechaun: 1, I am at: -380203.196026295 and I have: 0.0 gold.
+Removed I am Leprechaun: 5, I am at: 181687.18586692077 and I have: 0.0 gold.
+I am Leprechaun: 2, I am at: 940313.7647445839 and I have: 0.0 gold.
+I am Leprechaun: 3, I am at: 1702416.0745357764 and I have: 6000000.0 gold.
+
+
+Removed I am Leprechaun: 2, I am at: 940313.7647445839 and I have: 0.0 gold.
+I am Leprechaun: 3, I am at: 401345.4010824242 and I have: 6000000.0 gold.
+
+
+
+
+//REGULAR RUN
+azhang@ml:/home3/azhang/cpsc215/Project2c$ java DoubleRainbow 5 5
+I am Leprechaun: 2, I am at: 0.1681783844536533 and I have: 1000000.0 gold.
+I am Leprechaun: 1, I am at: 2.6713479079818847 and I have: 1000000.0 gold.
+I am Leprechaun: 3, I am at: 3.6587686179481613 and I have: 1000000.0 gold.
+I am Leprechaun: 4, I am at: 4.73940686012271 and I have: 1000000.0 gold.
+I am Leprechaun: 5, I am at: 4.991596179070656 and I have: 1000000.0 gold.
+
+
+I am Leprechaun: 3, I am at: -950861.4538598341 and I have: 1750000.0 gold.
+I am Leprechaun: 1, I am at: -173606.32874972394 and I have: 375000.0 gold.
+I am Leprechaun: 5, I am at: 5700.545694067925 and I have: 1125000.0 gold.
+I am Leprechaun: 2, I am at: 266273.8065954966 and I have: 250000.0 gold.
+I am Leprechaun: 4, I am at: 701891.2884971007 and I have: 1500000.0 gold.
+
+
+I am Leprechaun: 3, I am at: -1809023.7514913445 and I have: 1781250.0 gold.
+I am Leprechaun: 1, I am at: -297645.63592246873 and I have: 453125.0 gold.
+I am Leprechaun: 5, I am at: 167174.85180523832 and I have: 1054687.5 gold.
+I am Leprechaun: 2, I am at: 285480.3305978637 and I have: 320312.5 gold.
+I am Leprechaun: 4, I am at: 1265371.4185485858 and I have: 1390625.0 gold.
+
+
+I am Leprechaun: 3, I am at: -2353528.975596279 and I have: 1826171.875 gold.
+I am Leprechaun: 1, I am at: -686331.3590372519 and I have: 467773.4375 gold.
+I am Leprechaun: 5, I am at: 327644.76212929457 and I have: 1051269.53125 gold.
+I am Leprechaun: 2, I am at: 451860.16569081706 and I have: 319824.21875 gold.
+I am Leprechaun: 4, I am at: 1525453.262018708 and I have: 1334960.9375 gold.
+
+
+I am Leprechaun: 3, I am at: -2759776.698593694 and I have: 1866333.0078125 gold.
+I am Leprechaun: 1, I am at: -1131034.7758697267 and I have: 476623.53515625 gold.
+I am Leprechaun: 5, I am at: 511404.3918167196 and I have: 1051971.435546875 gold.
+I am Leprechaun: 2, I am at: 586584.8313928356 and I have: 312530.517578125 gold.
+I am Leprechaun: 4, I am at: 2186231.234402227 and I have: 1292541.50390625 gold.
+
+
+I am Leprechaun: 3, I am at: -2917658.9732219176 and I have: 1901054.3823242188 gold.
+I am Leprechaun: 1, I am at: -1358394.437356688 and I have: 967887.8784179688 gold.
+I am Leprechaun: 2, I am at: 613230.2077236251 and I have: 305448.5321044922 gold.
+I am Leprechaun: 5, I am at: 766088.3122906901 and I have: 1197025.2990722656 gold.
+I am Leprechaun: 4, I am at: 2434213.4858010523 and I have: 628583.9080810547 gold.
+

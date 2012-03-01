@@ -1,0 +1,145 @@
+// HW (02-15-2011): Chapter 3
+
+/**
+ * @author: Vlad Burca
+ * @version: 02-15-2011
+ */
+
+// *******
+// # R-3.3
+// *******
+
+  public void add(GameEntry e) {
+    int newScore = e.getScore();
+    if (n == maxEntries) { 
+      if (newScore <= entries[n-1].getScore())
+	return; 
+    }
+    else
+      n++;
+    int i = n-1; 
+    for ( ; (i >= 1) && (newScore > entries[i-1].getScore()); i--)
+      entries[i] = entries[i - 1]; 	 
+    entries[i] = e;
+  }
+  
+   /** Remove and return the high score at index i */
+  public GameEntry remove(int i) throws IndexOutOfBoundsException {
+    if ((i < 0) || (i >= n))
+      throw new IndexOutOfBoundsException("Invalid index: " + i);
+    GameEntry temp = entries[i];   
+    for (int j = i; j < n - 1; j++)   
+      entries[j] = entries[j+1];     
+    entries[n -1 ] = null;    
+    n--;
+    return temp;          
+  }
+
+
+// ********
+// # R-3.10
+// ********
+/** 
+ * The method takes as a parameter a new Node, x, and it has to put it at the beginning of a list.
+ * In order to do so, the method has to set the element that follows the new node (x) as being the previous 
+ * head of the list; also, the new head of the list will now be the new node (x).
+ */
+ 
+public void insertAtBeg(Node x) {
+      	x.setNext(head);
+      	head = x;
+      }    	
+
+// *******    
+// # C-3.5
+// *******
+/*
+Having the explained array, B, a good algorithm for finding the five integers in B that are repeated (speaking in terms of array cycles) is the following:
+ - we create a new array (called 'repeated'), with size = (n-5)+1, where the indexes of each element will represent an element in B, and the value repeated[i] will represent how many times the element i has been repeated in array B. 
+ - then, by using a single cycle of the array B (using a FOR loop from the beginning of B until the end of it), for each element B[i], we increment the corresponding value in the repeated array ( repeated[B[i]]++ ). 
+ - also, before incrementing it, we check if repeated[B[i]] == 4  --> this case tells us that, after we increment it again (which is exactly this time) it will become 5, therefore, the integer that repeats five times in B will be the index of repeated, which is B[i].
+*/
+
+// *******
+// # C-3.6
+// *******
+/* 
+Given the supposed game, one way of keeping track of the pairs of meeting players and of the winner is as follows:
+ - create a matrix Met of n x n, where n = number of players; the element Met[i][j] will represent how many times players i+1 and j+1 (since the matrix is indexed from 0) met during the game.
+ - when two players meet, call the function meet(i, j); this function will increment both values of Met[i][j] (Met[i][j]++) and Met[j][i] (Met[j][i]++), since if i meets j, j also meets i.
+ - the winner will be the player indexed as K in the matrix, if and only if each of the elements of the line K in the matrix Met will be > 0; that is, using a function check(k), this function will check the line K of the matrix, using a for loop, returning true if all the elements are > 0 or false otherwise:
+ 				for (int i = 0; i < n; i++)
+ 					if (Met[k][i] == 0)
+ 						return false;
+ 				return true;
+ - if the function returns true, the winner of the game will be the player K+1 (since the matrix is indexed from 0).
+ */
+
+// *******
+// # C-3.7
+// ******* 
+ 
+public class RecursiveProd {
+
+	private long p = 1;
+	private int ap, bp;
+	
+	public RecursiveProd(int a, int b) {
+		if (a > b)
+			p = rProduct(a, b);
+		else
+			p = rProduct(b, a);
+		System.out.println(" The RecursiveProduct of " + a + " and " + b + " is: " + p);
+	}
+	
+	private int rProduct(int x, int y) {
+		if (y == 1)
+			return x;
+		else
+			return x + rProduct(x, y - 1);
+	}
+	
+	public static void main (String args[]) {
+		RecursiveProd product = new RecursiveProd(2, 100);
+	}
+}
+
+// *****************************************************************
+// # Write a recursive method to calculate the sum of integers 1..N. 
+// *****************************************************************
+
+public int rSum(int n) {
+	if (n == 1)
+		return n;
+	else 
+		return n + rSum(n - 1);
+}
+
+// ******************************************************
+// # Write a recursive method to calculate x^n for n ≥ 0. 
+// ******************************************************
+
+public long rPower(int x, int n) {
+	if (n == 1) 
+		return x;
+	else
+		return x * rPower(x, n - 1);
+}
+
+// ************************************************************************
+// # Write a recursive method to calculate and return the sum of the values 
+// stored in an array of double. Pass the array and any variables you need 
+// as parameters. 
+// ************************************************************************
+
+public double rArraySum(double[] A) {
+	return rArraySum(A, A.length - 1);
+}
+	
+public double rArraySum(double[] A, int n) {
+	if (n == 0)
+		return A[n];
+	else
+		return A[n] + rArraySum(A, n - 1);
+}
+		
